@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngelHack", "AngelHack.csproj", "{DED52279-4D00-4A45-A837-25DD901A215C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DED52279-4D00-4A45-A837-25DD901A215C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED52279-4D00-4A45-A837-25DD901A215C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED52279-4D00-4A45-A837-25DD901A215C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED52279-4D00-4A45-A837-25DD901A215C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6386744C-400C-4967-A00D-3B50F4426C6A}
+	EndGlobalSection
+EndGlobal
