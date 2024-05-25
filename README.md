@@ -13,10 +13,17 @@
 In our web applicaton we used HTML5, CSS, Visual Studio, and GitHub for front-end development, creating a responsive user interface. The back-end is powered by the .NET Framework and C# for robust application logic, with SQL Server handling user data storage.
 
 # Problem
+According to a study by NVPC Individual Giving, in 2021 there was a 50% decrease in the median hours volunteered from 2018. One of tthe factors thta might bring about the change could be COVID.
 
 # Our Aim
-
+So our project wish to enhance the low participation rate in the volunteering community.
+ 
 # About Our Application
+To counter this problem, we created a platform to increase awareness for volunteerism through a social media webpage, providing a centralized hub for organizaions and retaining volunteers through incentives.
+
+So here a rough outline of our application:
+
+
 
 # Our Team
 1. Lee Han Hua
