@@ -27,8 +27,8 @@ namespace AngelHack.Services
         {
             modelBuilder.Entity<AppUser>(entity =>
             {
-                entity.Property(e => e.Id)
-                    .HasMaxLength(10)
+                entity.Property(e => e.UserId)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.UserName)
@@ -45,12 +45,7 @@ namespace AngelHack.Services
             modelBuilder.Entity<Posts>(entity =>
             {
                 entity.HasKey(e => e.PostId)
-                    .HasName("PK__Posts__5875F7AD02680261");
-
-                entity.Property(e => e.PostId)
-                    .HasMaxLength(10)
-                    .IsUnicode(false)
-                    .HasColumnName("Post_Id");
+                    .HasName("PK__Posts__AA126018D631780A");
 
                 entity.Property(e => e.DatePosted).HasColumnType("datetime");
 
@@ -65,18 +60,13 @@ namespace AngelHack.Services
 
                 entity.Property(e => e.PostTitle)
                     .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("Post_Title");
+                    .IsUnicode(false);
 
-                entity.Property(e => e.Uid)
-                    .HasMaxLength(10)
-                    .IsUnicode(false)
-                    .HasColumnName("UId");
-
-                entity.HasOne(d => d.UidNavigation)
+                entity.HasOne(d => d.User)
                     .WithMany(p => p.Posts)
-                    .HasForeignKey(d => d.Uid)
-                    .HasConstraintName("FK__Posts__UId__403A8C7D");
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Posts__UserId__7E37BEF6");
             });
 
             modelBuilder.Entity<Profiles>(entity =>
@@ -91,10 +81,6 @@ namespace AngelHack.Services
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Id)
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
-
                 entity.Property(e => e.Organisation)
                     .HasMaxLength(50)
                     .IsUnicode(false);
@@ -103,22 +89,15 @@ namespace AngelHack.Services
                     .WithMany()
                     .HasForeignKey(d => d.Id)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Profiles__Id__3D5E1FD2");
+                    .HasConstraintName("FK__Profiles__Id__7B5B524B");
             });
 
             modelBuilder.Entity<UserEvent>(entity =>
             {
                 entity.HasKey(e => new { e.Id, e.UeventId })
-                    .HasName("PK__UserEven__65714747315E33B6");
+                    .HasName("PK__UserEven__65714747C0332637");
 
-                entity.Property(e => e.Id)
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.UeventId)
-                    .HasMaxLength(10)
-                    .IsUnicode(false)
-                    .HasColumnName("UEvent_Id");
+                entity.Property(e => e.UeventId).HasColumnName("UEvent_Id");
 
                 entity.Property(e => e.Roles)
                     .HasMaxLength(50)
@@ -128,26 +107,23 @@ namespace AngelHack.Services
                     .WithMany(p => p.UserEvent)
                     .HasForeignKey(d => d.Id)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserEvent__Id__3A81B327");
+                    .HasConstraintName("FK__UserEvent__Id__787EE5A0");
 
                 entity.HasOne(d => d.Uevent)
                     .WithMany(p => p.UserEvent)
                     .HasForeignKey(d => d.UeventId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserEvent__UEven__3B75D760");
+                    .HasConstraintName("FK__UserEvent__UEven__797309D9");
             });
 
             modelBuilder.Entity<VEvents>(entity =>
             {
                 entity.HasKey(e => e.EventId)
-                    .HasName("PK__vEvents__FD6BEF843334AEB2");
+                    .HasName("PK__vEvents__FD6BEF8477C39252");
 
                 entity.ToTable("vEvents");
 
-                entity.Property(e => e.EventId)
-                    .HasMaxLength(10)
-                    .IsUnicode(false)
-                    .HasColumnName("Event_Id");
+                entity.Property(e => e.EventId).HasColumnName("Event_Id");
 
                 entity.Property(e => e.DatePosted).HasColumnType("datetime");
 

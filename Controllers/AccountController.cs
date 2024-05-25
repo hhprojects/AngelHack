@@ -36,7 +36,7 @@ public class AccountController : Controller
                new ClaimsPrincipal(
                   new ClaimsIdentity(
                      new Claim[] {
-                        new Claim(ClaimTypes.NameIdentifier, appUser.Id),
+                        new Claim(ClaimTypes.NameIdentifier, appUser.UserId),
                         new Claim(ClaimTypes.Name, appUser.UserName),
                         new Claim(ClaimTypes.Role, appUser.UserRole)
                      },

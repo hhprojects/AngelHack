@@ -11,7 +11,8 @@ namespace AngelHack.Models
             UserEvent = new HashSet<UserEvent>();
         }
 
-        public string Id { get; set; } = null!;
+        public int Id { get; set; }
+        public string UserId { get; set; } = null!;
         public string UserName { get; set; } = null!;
         public byte[] UserPass { get; set; } = null!;
         public string UserRole { get; set; } = null!;

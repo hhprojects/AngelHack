@@ -10,7 +10,7 @@ namespace AngelHack.Models
             UserEvent = new HashSet<UserEvent>();
         }
 
-        public string EventId { get; set; } = null!;
+        public int EventId { get; set; }
         public string Title { get; set; } = null!;
         public string ImageUrl { get; set; } = null!;
         public DateTime DatePosted { get; set; }

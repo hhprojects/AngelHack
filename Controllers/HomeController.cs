@@ -4,9 +4,17 @@ namespace AngelHack.Controllers
 {
     public class HomeController : Controller
     {
-        [Authorize]
+        private readonly AppDbContext _dbCtx;
+
+        public HomeController(AppDbContext dbContext)
+        {
+            _dbCtx = dbContext;
+        }
+
+
         public IActionResult Index()
         {
+            DbSet<Posts> dbs = _dbCtx.Posts;
             return View();
         }
     }

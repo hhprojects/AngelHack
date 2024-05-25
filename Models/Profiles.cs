@@ -5,7 +5,7 @@ namespace AngelHack.Models
 {
     public partial class Profiles
     {
-        public string Id { get; set; } = null!;
+        public int Id { get; set; }
         public string DisplayName { get; set; } = null!;
         public string Email { get; set; } = null!;
         public string Organisation { get; set; } = null!;

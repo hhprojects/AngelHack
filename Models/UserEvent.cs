@@ -5,8 +5,8 @@ namespace AngelHack.Models
 {
     public partial class UserEvent
     {
-        public string Id { get; set; } = null!;
-        public string UeventId { get; set; } = null!;
+        public int Id { get; set; }
+        public int UeventId { get; set; }
         public string? Roles { get; set; }
 
         public virtual AppUser IdNavigation { get; set; } = null!;
