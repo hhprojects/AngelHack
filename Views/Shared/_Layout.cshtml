@@ -46,6 +46,7 @@
       }
       nav li:hover {
         scale: 1.1;
+        font-weight:bold;
       }
       #current-page {
         font-weight: bold;
@@ -53,15 +54,16 @@
     </style>
 
     @RenderSection("Script", false)
-
+    
 </head>
 <body>
     <nav>
 
       <ol>
-        <li><a id="current-page">Community Connect</a></li>
+        <li><a>Community Connect</a></li>
         <li><a>Communities</a></li>
         <li>Map & Events</li>
+        <li>Contact us</li>
       </ol>
       <ol>
         <li>Tan Keng </li>
@@ -76,6 +78,8 @@
     <div class="container-fluid p-2">
         @RenderBody()
     </div>
+    <footer>
 
+    </footer>
 </body>
 </html>
