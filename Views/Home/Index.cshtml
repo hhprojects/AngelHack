@@ -1,4 +1,4 @@
-﻿@model Posts
+﻿@model List<Posts>
 @{
 	Layout = "_Layout";
 }
@@ -25,11 +25,11 @@
 </style>
 
 <div class="container" id="container">
-	@for (int i =0; i < 20; i++)
+	@for (int i =0; i < Model.Count; i++)
 	{
 		<div class="col-6" id="card">
 			<div id="text">
-				<h3 id="title">Name of Company</h3>
+				<h3 id="title">@Model[i].PostTitle</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 			<img src="~/images/baseimage.png" width="100%" />

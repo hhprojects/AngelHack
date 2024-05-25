@@ -122,6 +122,11 @@
       .footer-socials img:hover {
         scale: 1.1;
       }
+      a{
+       textDecoration: inherit;
+       color: inherit;
+       cursor: auto;
+      }
     </style>
 
     @RenderSection("Script", false)
@@ -135,15 +140,15 @@
       <div class="nav-link">
         <ol>
 
-          <li><a>Communities</a></li>
-          <li><a>Map & Events</a></li>
-          <li><a>Rewards</a</li>
-          <li><a>Leaderboard</a</li>
+          <li><a href="~/Home">Communities</a></li>
+          <li><a href="~/Events">Map & Events</a></li>
+          <li><a href="~/Rewards">Rewards</a></li>
+          <li><a>Leaderboard</a></li>
         </ol>
       </div>
       <div class="nav-profile">
         <ol>
-          <li>Tan Keng</li>
+          <li><a href="~/Home/Profile">Tan Keng</a></li>
           <li><img src="" /></li>
         </ol>
       </div>

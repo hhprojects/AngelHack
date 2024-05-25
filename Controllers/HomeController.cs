@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Data.Common;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AngelHack.Controllers
 {
@@ -15,6 +16,12 @@ namespace AngelHack.Controllers
         public IActionResult Index()
         {
             DbSet<Posts> dbs = _dbCtx.Posts;
+            List<Posts> posts = dbs.ToList();
+            return View(posts);
+        }
+
+        public IActionResult Profile()
+        {
             return View();
         }
     }
