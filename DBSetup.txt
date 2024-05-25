@@ -14,7 +14,11 @@ CREATE TABLE AppUser (
     UserName  VARCHAR (50)  NOT NULL,
     UserPass  VARBINARY(50) NOT NULL,
     UserRole  VARCHAR(50)   NOT NULL,
-    --LastLogin DATETIME      NULL
+    DisplayName VARCHAR(50) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Organisation VARCHAR(50) NOT NULL,
+    TotalPts INT NOT NULL,
+    TotalHrs INT NOT NULL
 );
 
 ----------------------------- Events Data -----------------------------
@@ -41,17 +45,6 @@ CREATE TABLE UserEvent (
     PRIMARY KEY (Id, UEvent_ID)
 );
 
-
------------------------------ ProfilePage Data -----------------------------
-CREATE TABLE Profiles (
-    Id        INT NOT NULL
-              FOREIGN KEY REFERENCES AppUser (Id),
-    DisplayName VARCHAR(50) NOT NULL,
-    Email VARCHAR(50) NOT NULL,
-    Organisation VARCHAR(50) NOT NULL,
-    TotalPts INT NOT NULL,
-    TotalHrs INT NOT NULL
-);
 
 ----------------------------- SocialMedia Posts -----------------------------
 CREATE TABLE Posts (

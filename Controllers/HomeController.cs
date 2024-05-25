@@ -22,7 +22,15 @@ namespace AngelHack.Controllers
 
         public IActionResult Profile()
         {
-            return View();
+            var userid = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+            DbSet<AppUser> dbs = _dbCtx.AppUser;
+            AppUser? user = dbs.Include(p => p.UserEvent).ThenInclude(p => p.Uevent).Where(p => p.UserId == userid)
+                .FirstOrDefault();
+            if (user != null)
+            {
+                return View(user);
+            }
+            return RedirectToAction("Index");
         }
     }
 }

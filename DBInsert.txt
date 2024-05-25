@@ -1,10 +1,10 @@
 DELETE FROM AppUser;
 
 
-INSERT INTO AppUser (UserId, UserName, UserPass, UserRole) VALUES 
-('lhh', 'Lee Han Hua', HASHBYTES('SHA1','password'),'User'),
-('nzh', 'Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company'),
-('tzx', 'Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin');
+INSERT INTO AppUser (UserId, UserName, UserPass, UserRole, DisplayName, Email, Organisation, TotalPts, TotalHrs) VALUES 
+('lhh', 'Lee Han Hua', HASHBYTES('SHA1','password'),'User', 'lhh', 'lhh01@gmail.com', 'NTU', '10', '30'),
+('nzh', 'Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company', 'nzh', 'nzh01@gmail.com', 'NTU', '15', '45'),
+('tzx', 'Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin', 'tzx', 'tzx01@gmail.com', 'NTU', '12', '36');
 
 
 INSERT INTO vEvents (Title, ImageURL, DatePosted, EventDate,
@@ -17,12 +17,6 @@ INSERT INTO vEvents (Title, ImageURL, DatePosted, EventDate,
 INSERT INTO UserEvent (Id, UEvent_Id, Roles) VALUES 
 ('1', '3', 'Volunteer'),
 ('1', '2', 'Volunteer');
-
-
-INSERT INTO Profiles (Id, DisplayName, Email, Organisation, TotalPts, TotalHrs) VALUES 
-('1', 'lhh', 'lhh01@gmail.com', 'NTU', '10', '30'),
-('2', 'nzh', 'nzh01@gmail.com', 'NTU', '15', '45'),
-('3', 'tzx', 'tzx01@gmail.com', 'NTU', '12', '36');
 
 
 INSERT INTO Posts (UserId, PostTitle, ImageURL, DatePosted, Organiser) VALUES 
