@@ -2,7 +2,7 @@ DELETE FROM AppUser;
 
 
 INSERT INTO AppUser (UserId, UserName, UserPass, UserRole, DisplayName, Email, Organisation, TotalPts, TotalHrs) VALUES 
-('lhh', 'Lee Han Hua', HASHBYTES('SHA1','password'),'User', 'lhh', 'lhh01@gmail.com', 'NTU', '10', '30'),
+('lhh', 'Lee Han Hua', HASHBYTES('SHA1','password'),'User', 'lhh', 'lhh01@gmail.com', 'NTU', '30', '10'),
 ('nzh', 'Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company', 'nzh', 'nzh01@gmail.com', 'NTU', '15', '45'),
 ('tzx', 'Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin', 'tzx', 'tzx01@gmail.com', 'NTU', '12', '36');
 

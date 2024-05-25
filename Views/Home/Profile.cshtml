@@ -44,24 +44,20 @@ margin: 40px;
       .personal-header{
         margin: 20px;
       }
+
       .personal-history{
-        margin:20px;
+            margin: 20px;
+            border: 1px solid black;
+            display: flex;
+            border-radius: 75px;
+            flex-direction: row;
+            align-items: center;
+            padding: 30px;
+      }
 
-        border: 1px solid black;
-        display: flex;
-        border-radius:75px;
-        flex-direction:row;
-        align-items: center;
+      table{
+      }
 
-      }
-      .personal-history ol{
-        list-style-type:none;
-        display: flex;
-        flex-direction: row;
-      }
-      .personal-history li{
-        margin: 30px;
-      }
 </style>
 
 <section class="profile">
@@ -97,16 +93,24 @@ margin: 40px;
 </div>
 
 <div class="personal-history">
-<ol>
-  <li>No.</li>
-  <li>Company</li>
-  <li>Start</li>
-  <li>End</li>
-  <li>Hours</li>
-  <li>Pts</li>
-
-
-
-</ol>
+    <table class="table">
+        <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Event Date</th>
+                <th scope="col">Organised By</th>
+                <th scope="col">Points Earned</th>
+                <th scope="col">Hours Earned</th>
+        </tr>
+         @foreach (var item in Model.UserEvent)
+         {   
+          <tr>
+              <th scope="row">@item.Uevent.Title</th>
+              <td>@item.Uevent.EventDate</td>
+              <td>@item.Uevent.Organiser</td>
+              <td>@item.Uevent.Points</td>
+              <td>@item.Uevent.Hrs</td>
+          </tr>  
+         }
+        </table>
 </div>
 </section>
