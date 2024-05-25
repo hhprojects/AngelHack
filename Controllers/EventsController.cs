@@ -2,9 +2,8 @@
 
 namespace AngelHack.Controllers
 {
-    public class HomeController : Controller
+    public class EventsController : Controller
     {
-        [Authorize]
         public IActionResult Index()
         {
             return View();

@@ -1,0 +1,31 @@
+DELETE FROM AppUser;
+
+
+INSERT INTO AppUser (UserId, UserName, UserPass, UserRole) VALUES 
+('lhh', 'Lee Han Hua', HASHBYTES('SHA1','password'),'User'),
+('nzh', 'Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company'),
+('tzx', 'Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin');
+
+
+INSERT INTO vEvents (Title, ImageURL, DatePosted, EventDate,
+            Organiser, Locations, Points, Hrs) VALUES 
+('V1', 'https', '2020-10-29', '2022-10-29', 'DBS', 'Jurong', '15', '5'),
+('V2', 'https', '2020-10-29', '2022-10-29', 'DBS', 'Jurong', '15', '5'),
+('V3', 'https', '2020-10-29', '2022-10-29', 'DBS', 'Jurong', '15', '5');
+
+
+INSERT INTO UserEvent (Id, UEvent_Id, Roles) VALUES 
+('1', '3', 'Volunteer'),
+('1', '2', 'Volunteer');
+
+
+INSERT INTO Profiles (Id, DisplayName, Email, Organisation, TotalPts, TotalHrs) VALUES 
+('1', 'lhh', 'lhh01@gmail.com', 'NTU', '10', '30'),
+('2', 'nzh', 'nzh01@gmail.com', 'NTU', '15', '45'),
+('3', 'tzx', 'tzx01@gmail.com', 'NTU', '12', '36');
+
+
+INSERT INTO Posts (UserId, PostTitle, ImageURL, DatePosted, Organiser) VALUES 
+('1', 'Dog Shelter', 'https', '2022-06-15', 'DBS'),
+('1', 'Cat Shelter', 'https', '2022-07-15', 'OCBC'),
+('1', 'HH Shelter', 'https', '2022-08-15', 'POSB');

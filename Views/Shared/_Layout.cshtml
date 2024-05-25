@@ -12,33 +12,40 @@
     <script src="~/lib/jquery/jquery.validate.unobtrusive.min.js"></script>
 
     <style>
-        * {
+         <style>
+      * {
         margin: 0 auto;
         font-family: sans-serif;
         padding: 0px;
       }
-
-      nav {
+      body {
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      nav{
         background-color: white;
-        justify-content: space-evenly;
         display: flex;
         border-bottom: 1px solid black;
         margin-bottom: 10px;
-
-
       }
-
-      nav ol {
+      .nav-header{
         display: flex;
         align-items: center;
       }
-      nav img{
+      .nav-link{
+        display: flex;
+          }
+      .nav-link ol {
+        display: flex;
+        align-items: center;
+      }
+      .nav-link img {
         border-radius: 50%;
         width: 100px;
         height: 100px;
-        border:1px solid black;
+        border: 1px solid black;
       }
-      nav li {
+      .nav-link li {
         list-style-type: none;
         padding: 2px;
         padding-left: 20px;
@@ -46,29 +53,99 @@
         margin: 15px;
         text-align: center;
       }
-      nav li:hover {
+      .nav-link li:hover {
         scale: 1.1;
-      }
-      #current-page {
         font-weight: bold;
+      }
+      .nav-profile{
+        display: flex;
+      }
+      .nav-profile ol {
+        display: flex;
+        align-items: center;
+      }
+      .nav-profile img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .nav-profile li {
+        list-style-type: none;
+        padding: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 15px;
+        text-align: center;
+      }
+      .nav-profile li:hover {
+        scale: 1.1;
+        font-weight: bold;
+      }
+
+      footer {
+        background-color: white;
+        justify-content: space-evenly;
+        display: flex;
+        margin-top: 10px;
+        margin-top: 1000px;
+        border-top: 1px solid black;
+      }
+      .footer-nav {
+        display: flex;
+        font-size: 12px;
+      }
+      .footer-nav ol {
+        display: flex;
+        align-items: center;
+      }
+      .footer-nav li {
+        list-style-type: none;
+        padding: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 15px;
+        text-align: center;
+      }
+      .footer-nav li:hover {
+        scale: 1.1;
+        font-weight: bold;
+      }
+      .footer-socials {
+        display: flex;
+      }
+      .footer-socials img {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+      .footer-socials img:hover {
+        scale: 1.1;
       }
     </style>
 
     @RenderSection("Script", false)
-
+    
 </head>
 <body>
     <nav>
-      <ol>
-        <li><a id="current-page">Community Connect</a></li>
-        <li><a>Communities</a></li>
-        <li>Map & Events</li>
-        <li>Rewards</li>
-      </ol>
-      <ol>
-        <li>Tan Keng</li>
-        <li><img src="meowprintshirtchart.png"></li>
-      </ol>
+    <div class="nav-header">
+ <h1>Community Connect</h1>
+    </div>
+      <div class="nav-link">
+        <ol>
+
+          <li><a>Communities</a></li>
+          <li><a>Map & Events</a></li>
+          <li><a>Contact Us</a</li>
+        </ol>
+      </div>
+      <div class="nav-profile">
+        <ol>
+          <li>Tan Keng</li>
+          <li><img src="" /></li>
+        </ol>
+      </div>
     </nav>
 
    <!--Navbar-->
@@ -78,6 +155,20 @@
     <div class="container-fluid p-2">
         @RenderBody()
     </div>
-
+    <footer>
+        <div class="footer-socials">
+        <img />
+        <img />
+        <img />
+      </div>
+      <div class="footer-nav">
+        <ol>
+          <li>Community Connect</li>
+          <li>Communities</li>
+          <li>Map & Events</li>
+          <li>Contact Us</li>
+        </ol>
+      </div>
+    </footer>
 </body>
 </html>
