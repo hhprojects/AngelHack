@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 using System.Dynamic;
 using System.Reflection;
 
-namespace AngelHack.Services;
+namespace AngelHackDb.Services;
 
 public interface IDbService
 {
