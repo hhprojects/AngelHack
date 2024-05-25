@@ -1,0 +1,111 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<style>
+    .profile{
+        margin: 10%;
+        margin-top:5%
+      }
+      .personal-info{
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      .personal-info ol{
+        list-style-type: none;
+      }
+      .personal-info-content{
+        margin:20px;
+
+        border: 1px solid black;
+        display: flex;
+        border-radius:75px;
+        flex-direction:row;
+        align-items: center;
+      }
+      .personal-info-content img{
+        width: 100px;
+        height: 100px;
+      }
+      .personal-info-content li{
+        margin: 40px;
+      }
+      .personal-stats{
+        text-align: right;
+        display: flex;
+      }
+      .personal-stats li{
+list-style-type:none;
+margin: 40px;
+      }
+      .personal-header{
+        margin: 20px;
+      }
+      .personal-history{
+        margin:20px;
+
+        border: 1px solid black;
+        display: flex;
+        border-radius:75px;
+        flex-direction:row;
+        align-items: center;
+
+      }
+      .personal-history ol{
+        list-style-type:none;
+        display: flex;
+        flex-direction: row;
+      }
+      .personal-history li{
+        margin: 30px;
+      }
+</style>
+
+<section class="profile">
+      <div class="personal-header">
+        <h2>Personal Info</h2>
+      </div>
+
+   <div class="personal-info">
+
+      <div class="personal-info-content">
+          <img>
+          <ol>
+            <li>Name:</li>
+            <li>Email:</li>
+            <li>Organization:</li>
+
+          </ol>
+      </div>
+    </div>
+<div class="personal-stats">
+    <div>
+      <li><h2>Community Hours</h2></li>
+      <li>Hours:</li>
+    </div>
+    <hr>
+    <div>
+      <li><h2>Rewards Points</h2></li>
+      <li>Hours:</li>
+    </div>
+</div>
+<div class="personal-header"> 
+  <h2>History</h2>
+</div>
+
+<div class="personal-history">
+<ol>
+  <li>No.</li>
+  <li>Company</li>
+  <li>Start</li>
+  <li>End</li>
+  <li>Hours</li>
+  <li>Pts</li>
+
+
+
+</ol>
+</div>
+</section>
