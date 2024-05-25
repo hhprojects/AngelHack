@@ -4,113 +4,112 @@
 }
 
 <style>
-    .profile{
-        margin: 10%;
-        margin-top:5%
-      }
-      .personal-info{
-        display: flex;
-        flex-direction: column;
+      
+    
+    #profile{
+        padding-top: 100px;
+    }
 
-      }
+    #username{
+        font-size:30px;
+        font-weight: bold;
+        margin-bottom:20px;
+    }
 
-      .personal-info ol{
-        list-style-type: none;
-      }
-      .personal-info-content{
-        margin:20px;
+    #details{
+        font-size:20px;
+        margin-bottom: 40px;
+    }
+    
+    #organisation-details{
+        margin-right: 15px;
+    }
+    
+    .community-details{
+        font-weight:bold;
+        font-size:30px;
+        padding: 20px 40px;
+    }
 
+    #hours{
+        border-right: 1px solid black;
+    }
+    
+    #pts-img{
+        margin-left: 40px;
+    }
+
+    #history{
+        margin-top: 40px;
+        margin-bottom:20px;
+    }
+
+    #history-title{
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .personal-history{
         border: 1px solid black;
         display: flex;
-        border-radius:75px;
-        flex-direction:row;
+        border-radius: 20px;
+        flex-direction: row;
         align-items: center;
-      }
-      .personal-info-content img{
-        width: 100px;
-        height: 100px;
-      }
-      .personal-info-content li{
-        margin: 40px;
-      }
-      .personal-stats{
-        text-align: right;
-        display: flex;
-      }
-      .personal-stats li{
-list-style-type:none;
-margin: 40px;
-      }
-      .personal-header{
-        margin: 20px;
-      }
+        padding: 10px;
+    }
 
-      .personal-history{
-            margin: 20px;
-            border: 1px solid black;
-            display: flex;
-            border-radius: 75px;
-            flex-direction: row;
-            align-items: center;
-            padding: 30px;
-      }
-
-      table{
-      }
 
 </style>
 
-<section class="profile">
-      <div class="personal-header">
-        <h2>Personal Info</h2>
-      </div>
-
-   <div class="personal-info">
-
-      <div class="personal-info-content">
-          <img>
-          <ol>
-            <li>Name: @Model.DisplayName</li>
-            <li>Email: @Model.Email</li>
-            <li>Organization: @Model.Organisation</li>
-
-          </ol>
-      </div>
-    </div>
-<div class="personal-stats">
+<div class="container" id="profile">
     <div>
-      <li><h2>Community Hours</h2></li>
-            <li><h2>@Model.TotalHrs</h2></li>
+        <img src="~/images/second.png" />
     </div>
-    <hr>
+    <div id="username">
+        @Model.UserName
+    </div>
+    <div id="details">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <span id="organisation-details">@Model.Organisation</span>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <span>@Model.Email</span>
+    </div>
     <div>
-      <li><h2>Rewards Points</h2></li>
-            <li><h2>@Model.TotalPts</h2></li>
+        <img src="~/images/hours.png" />
+        <span class="community-details" id="hours">@Model.TotalHrs Hours</span>
+        <img id="pts-img" src="~/images/points.png" />
+        <span class="community-details">@Model.TotalPts Points</span>
     </div>
 </div>
-<div class="personal-header"> 
-  <h2>History</h2>
+
+<div class="container">
+
 </div>
 
-<div class="personal-history">
-    <table class="table">
-        <tr>
+
+<div class="container">
+    <div id="history">
+        <p id="history-title">History Table</p>
+    </div>
+    <div class="personal-history">
+        <table class="table">
+            <tr>
                 <th scope="col">Title</th>
                 <th scope="col">Event Date</th>
                 <th scope="col">Organised By</th>
                 <th scope="col">Points Earned</th>
                 <th scope="col">Hours Earned</th>
-        </tr>
-         @foreach (var item in Model.UserEvent)
-         {   
-          <tr>
-              <th scope="row">@item.Uevent.Title</th>
-              <td>@item.Uevent.EventDate</td>
-              <td>@item.Uevent.Organiser</td>
-              <td>@item.Uevent.Points</td>
-              <td>@item.Uevent.Hrs</td>
-          </tr>  
-         }
+            </tr>
+            @foreach (var item in Model.UserEvent)
+            {
+                <tr>
+                    <th scope="row">@item.Uevent.Title</th>
+                    <td>@item.Uevent.EventDate</td>
+                    <td>@item.Uevent.Organiser</td>
+                    <td>@item.Uevent.Points</td>
+                    <td>@item.Uevent.Hrs</td>
+                </tr>
+            }
         </table>
+    </div>
 </div>
-</section>

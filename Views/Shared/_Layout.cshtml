@@ -110,13 +110,14 @@
         justify-content: space-evenly;
         display: flex;
         margin-top: 10px;
+        height:200px;
     
         border-top: 1px solid black;
         justify-content:flex-end;
       }
       .footer-nav {
         display: flex;
-        font-size: 12px;
+            font-size: 15px;
       }
       .footer-nav ol {
         display: flex;
@@ -134,13 +135,6 @@
         scale: 1.1;
         font-weight: bold;
       }
-      .footer-socials {
-        display: flex;
-      }
-      .footer-socials img {
-        width: 100px;
-        height: 100px;
-        margin: 10px;
       }
       .footer-socials img:hover {
         scale: 1.1;
@@ -181,8 +175,8 @@
       </div>
       <div class="nav-profile">
         <ol>
-          <li><a href="~/Home/Profile">@User.Identity?.Name</a></li>
-          <li><img src="" /></li>
+          <li><a href="~/Home/Profile" style="font-size:20px;">@User.Identity?.Name</a></li>
+          <a href="~/Home/Profile"><img src="~/images/second.png"></a>
         </ol>
       </div>
     </nav>
@@ -196,9 +190,6 @@
     </div>
     <footer>
         <div class="footer-socials">
-        <img />
-        <img />
-        <img />
       </div>
       <div class="footer-nav">
         <ol>
