@@ -22,7 +22,7 @@ public class AccountController : Controller
 
         var sql = String.Format(
             @"SELECT * FROM AppUser 
-               WHERE Id = '{0}' 
+               WHERE UserId = '{0}' 
                  AND UserPass = HASHBYTES('SHA1', '{1}')",
             uid.EscQuote(),  // prevent SQL Injection 
             pw.EscQuote());  // prevent SQL Injection
@@ -75,13 +75,6 @@ public class AccountController : Controller
                {
                    IsPersistent = true
                });
-
-            var updateSQL =
-                @"UPDATE AppUser 
-                    SET LastLogin = GETDATE() 
-                    WHERE Id = '{0}'";
-            string sql = String.Format(updateSQL, user.UserId);
-            int _ = _dbCtx.Database.ExecuteSqlRaw(sql);
 
             string? returnUrl = TempData["returnUrl"]?.ToString();
             if (returnUrl != null && Url.IsLocalUrl(returnUrl))

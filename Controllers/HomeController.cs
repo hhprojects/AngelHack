@@ -11,7 +11,7 @@ namespace AngelHack.Controllers
             _dbCtx = dbContext;
         }
 
-
+        [Authorize]
         public IActionResult Index()
         {
             DbSet<Posts> dbs = _dbCtx.Posts;
