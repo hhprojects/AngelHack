@@ -5,7 +5,7 @@ namespace AngelHack.Controllers;
 public class AccountController : Controller
 {
     private const string REDIRECT_CNTR = "Home";
-    private const string REDIRECT_ACTN = "GiftShop";
+    private const string REDIRECT_ACTN = "Index";
     private const string LOGIN_VIEW = "Login";
 
     private readonly AppDbContext _dbCtx;
