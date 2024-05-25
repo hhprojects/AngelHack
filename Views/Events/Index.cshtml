@@ -20,20 +20,40 @@
 			padding:20px;
 			margin:50px;
 		}
+		#location{
+			padding:20px;
+			background-color:lightgrey;
+			border-radius:10px;
+		}
+		#event-img{
+
+		}
 	</style>
 
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-6">
 			<div id="search">
-				<p>Search: </p>
+				<h3>Search: </h3>
 				<input id="event-search" type="text" />
 			</div>
 			<div>
 				@foreach(var item in Model)
 				{
 					<div class="card" id="event-card">
-						<h2></h2>
+						<div class="row">
+							<div class="col-9">
+								<h3>@item.Title</h3>
+								<h3>@String.Format("{0:dddd, MMMM d, yyyy}", item.EventDate)</h3>
+								<hr />
+								<p id="location">@item.Locations</p>
+								<p>Organised By: @item.Organiser</p>
+								<p>Posted On: @String.Format("{0:MM/dd/yy}", item.DatePosted)</p>
+							</div>	
+							<div class="col-3">
+								<img id="event-img" src="~/images/@(item.ImageUrl)" width="200px">
+							</div>
+						</div>
 					</div>
 				}
 			</div>

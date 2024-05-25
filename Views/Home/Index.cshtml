@@ -22,6 +22,18 @@
 		font-weight:bold;
 		text-decoration:underline;
 	}
+
+	#actions{
+		text-align: center;
+		border-right: 1px solid black;
+		padding-top: 10px;
+	}
+
+	#last-actions {
+		text-align: center;
+		padding-top: 10px;
+	}
+
 </style>
 
 <div class="container" id="container">
@@ -32,8 +44,21 @@
 				<h3 id="title">@Model[i].PostTitle</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
-			<img src="~/images/baseimage.png" width="100%" />
-			<div>
+			<img src="~/images/baseimage.png" width="100%"/>
+			<div class="row" id="actions-bars">
+				<div class="col-4" id="actions">
+					<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+					<p>Like</p>
+				</div>
+
+				<div class="col-4" id="actions">
+					<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					<p>Comment</p>
+				</div>
+				<div class="col-4" id="last-actions">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+					<p>Repost</p>
+				</div>
 			</div>
 		</div>
 	}
