@@ -2,9 +2,38 @@
 	Layout = "_Layout";
 }
 
-<div class="container">
-	<div class="col-6 card">
-		<div class="p-5"></div>
-		Hello
-	</div>
+<style>
+	#container{
+		padding-top:100px;
+	}
+	#card{
+		text-align:start;
+		border: solid 1px black;
+		margin-bottom:50px;
+		border-radius:5px;
+	}
+
+	#text{
+		padding: 20px;
+	}
+
+	#title{
+		font-weight:bold;
+		text-decoration:underline;
+	}
+</style>
+
+<div class="container" id="container">
+	@for (int i =0; i < 20; i++)
+	{
+		<div class="col-6" id="card">
+			<div id="text">
+				<h3 id="title">Name of Company</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<img src="~/images/baseimage.png" width="100%" />
+			<div>
+			</div>
+		</div>
+	}
 </div>
