@@ -1,0 +1,13 @@
+﻿CREATE TABLE AppUser (
+    Id        VARCHAR(10)   NOT NULL 
+              PRIMARY KEY,
+    UserName  VARCHAR (50)  NOT NULL,
+    UserPass  VARBINARY(50) NOT NULL,
+    UserRole  VARCHAR(50)   NOT NULL,
+    LastLogin DATETIME      NULL
+);
+
+INSERT INTO AppUser (Id, UserName, UserPass, UserRole) VALUES 
+('hhlee',  'Lee Han Hua', HASHBYTES('SHA1','password'),'User'),
+('zhngo',   'Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company'),
+('zxtay',  'Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin');
