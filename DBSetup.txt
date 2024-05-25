@@ -1,8 +1,12 @@
 ﻿--DataBases: Events, Posts, Profile
 
+DROP TABLE IF EXISTS UserEvent;
+DROP TABLE IF EXISTS vEvents;
+DROP TABLE IF EXISTS Profiles;
+DROP TABLE IF EXISTS Posts;
 DROP TABLE IF EXISTS AppUser;
 
--- AppUser Data
+----------------------------- AppUser Data -----------------------------
 CREATE TABLE AppUser (
     Id        VARCHAR(10)   NOT NULL 
               PRIMARY KEY,
@@ -17,8 +21,8 @@ INSERT INTO AppUser (Id, UserName, UserPass, UserRole) VALUES
 ('zhngo',   'Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company'),
 ('zxtay',  'Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin');
 
--- Events Data
-CREATE TABLE Events (
+----------------------------- Events Data -----------------------------
+CREATE TABLE vEvents (
     Event_Id  VARCHAR(10)   NOT NULL 
               PRIMARY KEY,
     Title VARCHAR (50)  NOT NULL,
@@ -26,26 +30,30 @@ CREATE TABLE Events (
     DatePosted DATETIME NOT NULL,
     EventDate DATETIME NOT NULL,
     Organiser  VARCHAR (50)  NOT NULL,
-    Location VARCHAR (50)  NOT NULL,
+    Locations VARCHAR (50)  NOT NULL,
     Points VARCHAR (50)  NOT NULL,
-    Hours INT NOT NULL
+    Hrs INT NOT NULL
 );
 
+INSERT INTO AppUser (Id, UserName, UserPass, UserRole) VALUES 
+('hhlee',  'Lee Han Hua', HASHBYTES('SHA1','password'),'User'),
+('zhngo',   'Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company'),
+('zxtay',  'Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin');
 
--- UserEvent Data
+----------------------------- UserEvent Data -----------------------------
 CREATE TABLE UserEvent (
     Id        VARCHAR(10) NOT NULL
-              FOREIGN KEY REFERENCE AppUser (Id),
+              FOREIGN KEY REFERENCES AppUser (Id),
     UEvent_Id VARCHAR(10) NOT NULL
-              FOREIGN KEY REFERENCE Events (Event_Id),
-    Role VARCHAR (50),
+              FOREIGN KEY REFERENCES vEvents (Event_Id),
+    Roles VARCHAR (50),
     PRIMARY KEY (Id, UEvent_ID)
 );
 
--- ProfilePage Data
-CREATE TABLE Profile (
+----------------------------- ProfilePage Data -----------------------------
+CREATE TABLE Profiles (
     Id        VARCHAR(10) NOT NULL
-              FOREIGN KEY REFERENCE AppUser (Id),
+              FOREIGN KEY REFERENCES AppUser (Id),
     DisplayName VARCHAR(50) NOT NULL,
     Email VARCHAR(50) NOT NULL,
     Organisation VARCHAR(50) NOT NULL,
@@ -53,14 +61,14 @@ CREATE TABLE Profile (
     TotalHrs INT NOT NULL
 );
 
--- SocialMedia Posts
+----------------------------- SocialMedia Posts -----------------------------
 CREATE TABLE Posts (
     Post_Id   VARCHAR(10) NOT NULL
               PRIMARY KEY,
     UId VARCHAR(10) 
-              FOREIGN KEY REFERENCE AppUser (Id),
+              FOREIGN KEY REFERENCES AppUser (Id),
     Post_Title VARCHAR(50) NOT NULL,
-    ImageURL VARCHAR (100) NOT NULL
+    ImageURL VARCHAR (100) NOT NULL,
     DatePosted DATETIME NOT NULL,
     Organiser  VARCHAR (50)  NOT NULL
 );
