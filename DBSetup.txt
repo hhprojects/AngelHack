@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS AppUser;
 
 ----------------------------- AppUser Data -----------------------------
 CREATE TABLE AppUser (
-    Id        VARCHAR(10)   NOT NULL 
+    Id        INT IDENTITY (1,1)   NOT NULL 
               PRIMARY KEY,
     UserName  VARCHAR (50)  NOT NULL,
     UserPass  VARBINARY(50) NOT NULL,
@@ -16,14 +16,14 @@ CREATE TABLE AppUser (
     --LastLogin DATETIME      NULL
 );
 
-INSERT INTO AppUser (Id, UserName, UserPass, UserRole) VALUES 
-('hhlee',  'Lee Han Hua', HASHBYTES('SHA1','password'),'User'),
-('zhngo',   'Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company'),
-('zxtay',  'Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin');
+INSERT INTO AppUser (UserName, UserPass, UserRole) VALUES 
+('Lee Han Hua', HASHBYTES('SHA1','password'),'User'),
+('Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company'),
+('Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin');
 
 ----------------------------- Events Data -----------------------------
 CREATE TABLE vEvents (
-    Event_Id  VARCHAR(10)   NOT NULL 
+    Event_Id  INT IDENTITY (1,1)   NOT NULL 
               PRIMARY KEY,
     Title VARCHAR (50)  NOT NULL,
     ImageURL VARCHAR (100)  NOT NULL,
@@ -35,14 +35,15 @@ CREATE TABLE vEvents (
     Hrs INT NOT NULL
 );
 
-INSERT INTO AppUser (Id, UserName, UserPass, UserRole) VALUES 
-('hhlee',  'Lee Han Hua', HASHBYTES('SHA1','password'),'User'),
-('zhngo',   'Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company'),
-('zxtay',  'Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin');
+INSERT INTO AppUser (Title, ImageURL, DatePosted, EventDate,
+            Organiser, Locations, Points, Hrs) VALUES 
+('Lee Han Hua', HASHBYTES('SHA1','password'),'User'),
+('Ngo Zong Han',   HASHBYTES('SHA1','password'),'Company'),
+('Tay Zhi Xian',  HASHBYTES('SHA1','password'),'Admin');
 
 ----------------------------- UserEvent Data -----------------------------
 CREATE TABLE UserEvent (
-    Id        VARCHAR(10) NOT NULL
+    Id        INT IDENTITY (1,1) NOT NULL
               FOREIGN KEY REFERENCES AppUser (Id),
     UEvent_Id VARCHAR(10) NOT NULL
               FOREIGN KEY REFERENCES vEvents (Event_Id),
@@ -52,7 +53,7 @@ CREATE TABLE UserEvent (
 
 ----------------------------- ProfilePage Data -----------------------------
 CREATE TABLE Profiles (
-    Id        VARCHAR(10) NOT NULL
+    Id        INT IDENTITY (1,1) NOT NULL
               FOREIGN KEY REFERENCES AppUser (Id),
     DisplayName VARCHAR(50) NOT NULL,
     Email VARCHAR(50) NOT NULL,
@@ -63,7 +64,7 @@ CREATE TABLE Profiles (
 
 ----------------------------- SocialMedia Posts -----------------------------
 CREATE TABLE Posts (
-    Post_Id   VARCHAR(10) NOT NULL
+    Post_Id   INT IDENTITY (1,1) NOT NULL
               PRIMARY KEY,
     UId VARCHAR(10) 
               FOREIGN KEY REFERENCES AppUser (Id),
