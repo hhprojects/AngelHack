@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
     <script src="~/lib/jquery/jquery.min.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
@@ -17,33 +18,46 @@
         font-family: sans-serif;
         padding: 0px;
       }
+
       body {
         min-height: 100vh;
         flex-direction: column;
+        background-color:  #F3F2ED;
       }
+
       nav{
         background-color: white;
         display: flex;
-        border-bottom: 1px solid black;
+        box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.1);
         margin-bottom: 10px;
       }
+      
       .nav-header{
         display: flex;
         align-items: center;
       }
+
+      .nav-header h1{
+        font-size: 20px;
+        font-weight: bold;
+      }
+
       .nav-link{
         display: flex;
-          }
+      }
+
       .nav-link ol {
         display: flex;
         align-items: center;
       }
+
       .nav-link img {
         border-radius: 50%;
         width: 100px;
         height: 100px;
         border: 1px solid black;
       }
+
       .nav-link li {
         list-style-type: none;
         padding: 2px;
@@ -53,23 +67,28 @@
         text-align: center;
         color:black;
       }
+
       .nav-link li:hover {
         scale: 1.1;
         font-weight: bold;
       }
+
       .nav-profile{
         display: flex;
       }
+
       .nav-profile ol {
         display: flex;
         align-items: center;
       }
+
       .nav-profile img {
         border-radius: 50%;
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
         border: 1px solid black;
       }
+
       .nav-profile li {
         list-style-type: none;
         padding: 2px;
@@ -78,11 +97,13 @@
         margin: 15px;
         text-align: center;
       }
+
       .nav-profile li:hover {
         scale: 1.1;
         font-weight: bold;
       }
 
+      /* footer */
       footer {
         background-color: white;
         justify-content: space-evenly;
@@ -134,9 +155,19 @@
     
 </head>
 <body>
+    <!-- Nav Bar -->
     <nav>
     <div class="nav-header">
- <h1>Community Connect</h1>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-2">
+          <img src="~/images/logo.png" />
+        </div>
+        <div class="col-8" style="text-align: center;">
+          <h1>Community</h1>
+          <h1>Connect</h1>
+        </div>
+      </div>
+      
     </div>
       <div class="nav-link">
         <ol>
