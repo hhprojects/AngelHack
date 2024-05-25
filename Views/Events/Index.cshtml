@@ -1,1 +1,45 @@
-﻿<p>Hello</p>
+﻿@{
+	Layout = "_Layout";
+}
+@model List<VEvents>
+
+	<style>
+		#search{
+			margin:0 50px;
+		}
+		#event-search{
+			border: solid 1px lightgray;
+			width: 400px;
+			padding: 10px 20px;
+			border-radius: 30px;
+			outline: none;
+			font-size: large;
+		}
+
+		#event-card{
+			padding:20px;
+			margin:50px;
+		}
+	</style>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-6">
+			<div id="search">
+				<p>Search: </p>
+				<input id="event-search" type="text" />
+			</div>
+			<div>
+				@foreach(var item in Model)
+				{
+					<div class="card" id="event-card">
+						<h2></h2>
+					</div>
+				}
+			</div>
+		</div>
+		<div class="col-6">
+			<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1WYKgUr302ZPEEMiGYUHQ9t9WzG9Fy9U&ehbc=2E312F" width=100% height="900px"></iframe>
+		</div>
+	</div>
+</div>

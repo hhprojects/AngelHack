@@ -1,5 +1,69 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<AppUser>
 @{
+	Layout = "_Layout";
 }
+
+<style>
+	#top-display{
+		display:flex;
+		justify-content: space-between;
+	}
+	#left-image{
+		transform: scaleX(-1);
+	}
+	#first-place{
+		display:flex;
+		align-items:flex-end;
+	}
+
+
+	#first-img,{
+		position:relative;
+	}
+
+	#second-img, #third-img {
+		position:relative;
+		left:50px;
+	}
+
+	#first-badge, #second-badge, #third-badge {
+		position: absolute;
+	}
+
+	#bottom-display{
+		display:flex;
+		justify-content:space-around;
+	}
+
+</style>
+
+<div class="container" id="top-display">
+	<img id="left-image" src="~/images/party.png" />
+	<div id="first-place">
+		<img id="first-img" src="~/images/first.png" width="200px">
+		<img id="first-badge" src="~/images/firstbadge.png">
+	</div>
+	<img src="~/images/party.png" />
+</div>
+<div class="container" id="bottom-display">
+	<div>
+		<img id="second-img" src="~/images/second.png" width="200px">
+		<img id="second-badge" src="~/images/secondbadge.png">
+	</div>
+	<div>
+		<img id="third-img" src="~/images/third.png" width="200px">
+		<img id="third-badge" src="~/images/thirdbadge.png">
+	</div>
+</div>
+<div class="container">
+	<table class="table table-bordered">
+		@for (int i = 0; i < Model.Count; i++)
+		{
+			<tr>
+				<th scope="row">@(i+1)</th>
+				<td>@Model[i].DisplayName</td>
+				<td>@Model[i].TotalPts</td>
+			</tr>
+		}
+	</table>
+</div>

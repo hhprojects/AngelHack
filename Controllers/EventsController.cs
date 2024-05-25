@@ -15,8 +15,8 @@ namespace AngelHack.Controllers
         public IActionResult Index()
         {
             DbSet<VEvents> dbs = _dbCtx.VEvents;
-            List<VEvents> vEvents = dbs.ToList();
-            return View();
+            List<VEvents> events = dbs.ToList();
+            return View(events);
         }
     }
 }

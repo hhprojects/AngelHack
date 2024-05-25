@@ -16,7 +16,7 @@ namespace AngelHack.Controllers
         {
 			DbSet<AppUser> dbs = _dbCtx.AppUser;
             List<AppUser> users = dbs.ToList();
-			return View();
+			return View(users);
         }
     }
 }

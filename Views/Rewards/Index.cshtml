@@ -1,5 +1,202 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    Layout = "_Layout";
 }
+
+
+<style>
+    .card-title {
+        font-weight: bold;
+    }
+
+    .button {
+        background-color: white;
+        color: black;
+        border: 2px solid #04AA6D;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .page-title {
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .reward-pts {
+        margin-bottom: 20px;
+    }
+
+    .order-card {
+        color: #fff;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        border: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .bg-c-blue {
+        background: linear-gradient(45deg, #4099ff, #73b4ff);
+    }
+
+    .reward-nav {
+        cursor: pointer;
+        display: flex;
+        align-items: flex-start;
+    }
+
+        .reward-nav a {
+            padding: 10px;
+        }
+
+            .reward-nav a:hover {
+                background-color: gold;
+                display: block;
+            }
+
+    main div {
+        display: none;
+        padding: 20px;
+    }
+
+    .active {
+        display: block;
+    }
+</style>
+
+
+<div class="container">
+    <h1 class="page-title">Rewards</h1>
+
+    <div class="row reward-pts">
+        <div class="container d-flex mt-4" style="margin-left: 0;">
+            <div class="card mb-3 pd-2" style="max-width: 800px; margin-left: 0;">
+                <div class="row g-0">
+                    <div class="col-md-12 bg-c-blue order-card">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Reward Points
+                            </h4>
+                            <!-- button -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <h1 class="text-right"><i class="fa fa-heart f-right"></i></h1>
+                                    </div>
+                                    <div class="col-8">
+                                        <h1>486</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar -->
+    <div class="row" style="margin-left: 0;">
+        <h1>Claimable Reward</h1>
+        <div class="container" style="margin-left: 0;">
+            <nav class="reward-nav">
+                <a data-id="1">Item 1</a>
+                <a data-id="2">Item 2</a>
+            </nav>
+            <main>
+                <div class="active">
+                    <section class="container d-flex mt-4" style="margin-left: 0;">
+                        <section class="card mb-3 pd-2" style="max-width: 800px; margin-left: 0;">
+                            <section class="row g-0">
+                                <section class="col-md-4" style="margin-left: 0;">
+                                    <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"
+                                         class="img-fluid rounded-start" alt="...">
+                                </section>
+                                <section class="col-md-8">
+                                    <section class="card-body">
+                                        <h4 class="card-title">
+                                            Data Structures
+                                        </h4>
+                                        <p class="card-text">
+                                            A data structure is a storage that is
+                                            used to store and organize data.
+                                        </p>
+                                        <p class="card-text">
+                                            <small class="text-muted">
+                                                Last updated now
+                                            </small>
+                                        </p>
+                                        <!-- button -->
+                                        <section class="container">
+                                            <section class="row">
+                                                <section class="col-sm">
+                                                    <button type="button" class="button">Redeem</button>
+                                                </section>
+                                                <section class="col-sm">
+                                                    <h1 style="font-weight: bold;">100 Points</h1>
+                                                </section>
+                                            </section>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <div>
+                    <section class="container d-flex mt-4" style="margin-left: 0;">
+                        <section class="card mb-3 pd-2" style="max-width: 800px; margin-left: 0;">
+                            <section class="row g-0">
+                                <section class="col-md-4" style="margin-left: 0;">
+                                    <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"
+                                         class="img-fluid rounded-start" alt="...">
+                                </section>
+                                <section class="col-md-8">
+                                    <section class="card-body">
+                                        <h4 class="card-title">
+                                            Bali Trip
+                                        </h4>
+                                        <p class="card-text">
+                                            A data structure is a storage that is
+                                            used to store and organize data.
+                                        </p>
+                                        <p class="card-text">
+                                            <small class="text-muted">
+                                                Last updated now
+                                            </small>
+                                        </p>
+                                        <!-- button -->
+                                        <section class="container">
+                                            <section class="row">
+                                                <section class="col-sm">
+                                                    <button type="button" class="button">Redeem</button>
+                                                </section>
+                                                <section class="col-sm">
+                                                    <h1 style="font-weight: bold;">700 Points</h1>
+                                                </section>
+                                            </section>
+                                        </section>
+
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    document.querySelectorAll('nav a')
+        .forEach(e => e.addEventListener('click', _ => change(e.dataset.id)))
+
+
+    function change(n) {
+        let panels = document.querySelectorAll('main div')
+        panels.forEach(p => p.classList.remove('active'))
+        panels[n - 1].classList.add('active')
+    }
+</script>
