@@ -23,7 +23,29 @@ To counter this problem, we created a platform to increase awareness for volunte
 
 So here a rough outline of our application:
 
+### Community Social Media Page
+![alt text](https://github.com/hhprojects/AngelHack/blob/master/wwwroot/images/communitiespage.png)
+Individuals and companies able to post their volunteering experience which could help spread awareness to bring more people into our platform.
 
+### Events Page
+![alt text](https://github.com/hhprojects/AngelHack/blob/master/wwwroot/images/eventpage.png)
+A centralised managament system, where participants could look up for ongoing volunteering event to participate in. Where we also have a interactive map for user to discover more events based on the geolocation.
+
+### Profile Page
+![alt text](https://github.com/hhprojects/AngelHack/blob/master/wwwroot/images/profilepage.png)
+Personalised profile page for user where it display their commitment hours and also awards that they have achieved, showcasing their achievement, which can helps in future scouting and boosting their portfolio.
+
+# Uniquesness ✨
+
+1. Integrate Incentive and Reward System (Reward Page)
+2. Interactive Map-Based Event Discovery (Event Page)
+3. Social Media Integration and Community Engagement (Community Social Media Page)
+4. Evenet Management for Organizers (Event Page)
+
+# Future Possibilities
+1. User Post Creation - Closer to a social media app
+2. Personalised Search Algorithm - Recommend more related volunteering event that are more specific to the user based on their previous participation (AI Recommendation System)
+3. A calendar page to keep track of all the upcoming events sign up by the user, notifying them whenthe event is nearby
 
 # Our Team
 1. Lee Han Hua
