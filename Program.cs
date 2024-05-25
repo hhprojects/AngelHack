@@ -1,14 +1,15 @@
-
+global using AngelHack.Models;
+global using AngelHack.Services;
 global using Microsoft.AspNetCore.Authentication;
 global using Microsoft.AspNetCore.Authentication.Cookies;
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 global using Microsoft.AspNetCore.Mvc.Rendering;
 global using Microsoft.EntityFrameworkCore;
-global using AngelHack.Services;
+global using AngelHackDb.Services;
 global using System.ComponentModel.DataAnnotations;
 global using System.Security.Claims;
-using System;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
@@ -19,9 +20,9 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
                     options.AccessDeniedPath = "/Account/Forbidden/";
                 });
 builder.Services.AddScoped<IDbService, DbService>();
-/*builder.Services.AddDbContext<AppDbContext>(
+builder.Services.AddDbContext<AppDbContext>(
    options => options.UseSqlServer(
-       builder.Configuration.GetConnectionString("DefaultConnection")));*/
+       builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 var app = builder.Build();
