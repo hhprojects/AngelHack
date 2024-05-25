@@ -37,13 +37,13 @@
 				<h3>Search: </h3>
 				<input id="event-search" type="text" />
 			</div>
-			<div>
+			<div id="item-display">
 				@foreach(var item in Model)
 				{
 					<div class="card" id="event-card">
 						<div class="row">
 							<div class="col-9">
-								<h3>@item.Title</h3>
+								<h3><a href="#" id="lolimtitle">@item.Title</a></h3>
 								<h3>@String.Format("{0:dddd, MMMM d, yyyy}", item.EventDate)</h3>
 								<hr />
 								<p id="location">@item.Locations</p>
@@ -63,3 +63,26 @@
 		</div>
 	</div>
 </div>
+
+
+<script>
+	$(document).ready(function () {
+		$("#event-search").keyup(function (event) {
+			var searchText = event.target.value.toLowerCase();
+			var display = document.getElementById('item-display');
+			var items = display.getElementsByClassName('card');
+
+			for (var i = 0; i < items.length; i++) {
+				var test = items[i].getElementsByTagName('h3')[0];
+				txtValue = test.innerText;
+				console.log(txtValue);
+				if (txtValue.toLowerCase().indexOf(searchText) > -1) {
+					items[i].style.display = "";
+				} else {
+					items[i].style.display = "none";
+				}
+			}
+		})
+	});
+
+</script>
