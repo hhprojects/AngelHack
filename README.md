@@ -45,7 +45,8 @@ Personalised profile page for user where it display their commitment hours and a
 # Future Possibilities
 1. User Post Creation - Closer to a social media app
 2. Personalised Search Algorithm - Recommend more related volunteering event that are more specific to the user based on their previous participation (AI Recommendation System)
-3. A calendar page to keep track of all the upcoming events sign up by the user, notifying them whenthe event is nearby
+3. Automated scheduling system, where the system will notify events for the user to sign up, and automatically add them to a calendar, preventing clashes and sending reminder nearer to the event date
+   
 
 # Our Team
 1. Lee Han Hua
