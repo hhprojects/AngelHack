@@ -5,8 +5,9 @@
   <img src="https://github.com/hhprojects/AngelHack/blob/master/wwwroot/images/Component1.png?raw=true" alt="Community connect Logo"/>
 </p>
 
-`Community Connect` is a social responsibility program aims to engage individuals, communities, and organizations in a collective effort to build long-lasting avenues of volunteers. 
+Our project `Community Connect` is a social responsibility program aims to engage individuals, communities, and organizations in a collective effort to build long-lasting avenues of volunteers. Through the use of 5 main components, the Social Media system, Events Sign Up system, Rewards system, Leaderboard page, and Profile page, we are looking to facilitate a complete solution from motivating an individual to start on their volunteering journey, to nurturing their passion for volunteering activities through incentives. 
 <br>
+
 
 # Technical Stack
 ![alt text](https://github.com/hhprojects/AngelHack/blob/master/wwwroot/images/infrastructure.png)
