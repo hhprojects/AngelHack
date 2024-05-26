@@ -40,7 +40,7 @@ Personalised profile page for user where it display their commitment hours and a
 1. Integrate Incentive and Reward System (Reward Page)
 2. Interactive Map-Based Event Discovery (Event Page)
 3. Social Media Integration and Community Engagement (Community Social Media Page)
-4. Evenet Management for Organizers (Event Page)
+4. Event Management for Organizers (Event Page)
 
 # Future Possibilities
 1. User Post Creation - Closer to a social media app
