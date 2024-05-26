@@ -33,7 +33,7 @@ A centralised managament system, where participants could look up for ongoing vo
 
 ### Profile Page
 ![alt text](https://github.com/hhprojects/AngelHack/blob/master/wwwroot/images/profilepage.png)
-Personalised profile page for user where it display their commitment hours and also awards that they have achieved, showcasing their achievement, which can helps in future scouting and boosting their portfolio.
+Personalised profile page for user where it display their commitment hours and also awards what they have achieved, showcasing their achievements, which can helps in future scouting for companies and also for user to boost their portfolio.
 
 # Uniquesness ✨
 
