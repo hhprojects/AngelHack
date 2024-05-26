@@ -46,6 +46,8 @@ Personalised profile page for user where it display their commitment hours and a
 1. User Post Creation - Closer to a social media app
 2. Personalised Search Algorithm - Recommend more related volunteering event that are more specific to the user based on their previous participation (AI Recommendation System)
 3. Automated scheduling system, where the system will notify events for the user to sign up, and automatically add them to a calendar, preventing clashes and sending reminder nearer to the event date
+4. Notification System
+5. Chatting function for multiple user to interact, especially when they sign up for the same event (inviting and sharing with one another)
    
 
 # Our Team
